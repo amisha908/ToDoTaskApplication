@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trello-like Project</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="bg-image">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(102, 89, 52); color: orangered;">
+      <div class="container-fluid">
+        <h1 class="navbar-brand mx-auto mb-0" style="color: rgb(224, 176, 94);">Task Management System</h1>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-3">
+    <div class="row">
+      <section class="col-md-4">
+        <div class="card mb-3" id="todo">
+          <div class="card-header transparent-card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">To-Do</h5>
+            <button class="btn btn-primary btn-sm" onclick="showAddTaskForm()">Add Task</button>
+          </div>
+          <div class="card-body transparent-card-body" id="todoTasks">
+            <!-- Tasks will be appended here -->
+          </div>
+        </div>
+      </section>
+      <section class="col-md-4">
+        <div class="card mb-3" id="inProcess">
+          <div class="card-header transparent-card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">In Process</h5>
+          </div>
+          <div class="card-body transparent-card-body" id="inProcessTasks">
+            <!-- Tasks will be appended here -->
+          </div>
+        </div>
+      </section>
+      <section class="col-md-4">
+        <div class="card mb-3" id="finished">
+          <div class="card-header transparent-card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Finished</h5>
+          </div>
+          <div class="card-body transparent-card-body" id="finishedTasks">
+            <!-- Tasks will be appended here -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addTaskModalLabel">Add Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="taskForm">
+            <div class="mb-3">
+              <label for="taskTitle" class="form-label">Task Title</label>
+              <input type="text" class="form-control" id="taskTitle" required>
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Task Description</label>
+              <textarea class="form-control" id="taskDescription" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <script src="JS/TaskManager.js"></script>
+</body>
+</html>

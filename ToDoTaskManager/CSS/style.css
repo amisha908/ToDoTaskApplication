@@ -1,0 +1,71 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.bg-image {
+  background-image: url('../Images/abstract-background-with-geometric-ornament-pattern-wallpapers-backgrounds_743855-35535.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.transparent-card-header, .transparent-card-body {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.card-body {
+  min-height: 400px;
+}
+
+.task {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: grab;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task .btn-close {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  margin-top: -18px;
+}
+
+.task .btn-close i {
+  color: #000;
+}
+
+.task.dragging {
+  opacity: 0.5;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
